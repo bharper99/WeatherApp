@@ -1,54 +1,62 @@
+body {
+  background-color: #f9f7fe !important;
+}
 #city {
-  font-family: "Libre Baskerville", serif;
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 #app-border {
-  border: 2.5px solid #583d72;
-  padding: 15px;
+  padding: 40px;
   margin: 50px auto;
   border-radius: 10px;
   max-width: 700px;
   box-shadow: 5px 3px 3px #edeef7;
-  background-color: #ffe3e3;
+  background-color: white;
 }
 
 .weatherSearchField {
   margin-bottom: 20px;
-  font-family: "Libre Baskerville", serif;
+  color: #a8a9ad;
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
 }
 #city-name-search {
   width: 60%;
 }
 
 #search-button {
-  color: #ff8474;
-  background-color: #583d72;
+  color: #f9f7fe;
+  background-color: #1d2d50;
   border-radius: 3px;
   border: none;
   padding-top: 2px;
   padding-bottom: 2px;
   width: 15%;
+  border: #1d2d50;
 }
 
 #search-button:hover {
-  color: #583d72;
-  background-color: #ff8474;
+  color: #1d2d50;
+  background-color: #f9f7fe;
+  border: #1d2d50;
   transition: 200ms;
 }
 h1 {
-  color: #9f5f80;
+  color: #1d2d50;
 }
 #date-time {
   padding: 0px;
   list-style-type: none;
-  color: #ff8474;
+  color: #a8a9ad;
 }
 #cloud-icon {
   font-size: 60px;
   margin-right: 15px;
+  color: #1d2d50;
 }
 #current-temp {
   font-size: 60px;
   margin-left: none;
+  color: #1d2d50;
 }
 #icon-fact-row {
   margin-left: 0px;
@@ -59,16 +67,26 @@ h1 {
   list-style-type: none;
   color: #ff8474;
   margin-left: 100px;
-  margin-top: 10px;
-  font-family: "Libre Baskerville", serif;
+  margin-top: 20px;
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+  color: #a8a9ad;
+}
+#celsius {
+  color: #1d2d50;
+}
+#farenheit {
+  color: #1d2d50;
 }
 .weekDayImage {
   font-size: 25px;
-  color: #583d72;
+  color: #1d2d50;
 }
 li {
-  font-family: "Libre Baskerville", serif;
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
 }
 .col {
-  font-family: "Libre Baskerville", serif;
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+}
+small {
+  color: #a8a9ad;
 }
