@@ -20,7 +20,7 @@
     <title>Weather App</title>
   </head>
   <body>
-      <div class="container" id="app-border">
+      <div class="container-fluid" id="app-border">
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <form id="search-form" class="mb-3 weatherSearchField">
@@ -66,48 +66,53 @@
             </div> 
             
             <div class="row" id="days-of-week">
-          <div class="col">
-            Mon
-            <div class="col,"><i class="fas fa-cloud weekDayImage"></i></div>
+          <div class="col-2">
+            <p>Mon</p>  
+            <div class="col,"><i class="fas fa-cloud weekDayImage cloudIcon"></i></div>
             <div class="col">15° <small>9°</small></div>
           </div>
-          <div class="col">
-            Tue
+          <div class="col-2">
+           <p>Tue</p> 
             <div class="col">
-              <i class="fas fa-cloud-showers-heavy weekDayImage"></i>
-            </div>
+              <i class="fas fa-cloud-showers-heavy weekDayImage"></i></div>
             <div class="col">12° <small>6°</small></div>
           </div>
-          <div class="col">
-            Wed
+          <div class="col-2">
+            <p>Wed</p> 
             <div class="col"><i class="fas fa-wind weekDayImage"></i></div>
             <div class="col">17° <small>12°</small></div>
           </div>
-          <div class="col">
-            Thu
-            <div class="col"><i class="fas fa-cloud weekDayImage"></i></div>
+          <div class="col-2">
+            <p>Thu</p> 
+            <div class="col"><i class="fas fa-cloud weekDayImage cloudIcon"></i></div>
             <div class="col">15° <small>9°</small></div>
           </div>
-          <div class="col">
-            Fri
+          <div class="col-2">
+             <p>Fri</p> 
             <div class="col">
-              <i class="fas fa-cloud-showers-heavy weekDayImage"></i>
-            </div>
+              <i class="fas fa-cloud-showers-heavy weekDayImage"></i> </div>
+            <div class="col">12° <small>6°</small></div>
+          </div>
+          <div class="col-2">
+             <p>Sat</p> 
+            <div class="col">
+              <i class="fas fa-cloud-showers-heavy weekDayImage"></i> </div>
             <div class="col">12° <small>6°</small></div>
           </div>
           <div>
               <br>
               <br>
-         <footer>
-          <small>This project was coded by <a href="https://www.harperbphotos.com/" class="website-link" target
-            ="_blank">Beth Harper</a> and is open-sourced on <a href="https://github.com/bharper99/WeatherApp" target
-            ="_blank" class="website-link"> GitHub</a> </small>
-            </footer>
+         
             </div>
         </div>        
         </div>
       </div>
     </div>
+    <footer>
+          <small>This project was coded by <a href="https://www.harperbphotos.com/" class="website-link" target
+            ="_blank">Beth Harper</a> and is open-sourced on <a href="https://github.com/bharper99/WeatherApp" target
+            ="_blank" class="website-link"> GitHub</a> </small>
+            </footer>
      <script src="src/script.js"></script>
 </body>
 </html>
