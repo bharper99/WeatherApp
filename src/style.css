@@ -19,19 +19,12 @@ body {
   color: #a8a9ad;
   font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
 }
-#city-name-search {
-  width: 60%;
-}
 
 #search-button {
   color: #f9f7fe;
   background-color: #1d2d50;
   border-radius: 3px;
   border: none;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  width: 15%;
-  border: #1d2d50;
 }
 
 #search-button:hover {
@@ -63,19 +56,28 @@ h1 {
   margin-right: 0px;
 }
 #weather-stats {
-  padding: 0px;
   list-style-type: none;
   color: #ff8474;
-  margin-left: 100px;
-  margin-top: 20px;
   font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
   color: #a8a9ad;
+  margin-left: 10px;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: -20px;
+}
+#weather-stats-style {
+  float: left;
 }
 #celsius {
   color: #1d2d50;
 }
 #farenheit {
   color: #1d2d50;
+}
+#days-of-week {
+  text-align: center;
+  padding-top: 50px;
+  margin-left: 2px;
 }
 .weekDayImage {
   font-size: 25px;
