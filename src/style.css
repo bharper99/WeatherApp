@@ -44,12 +44,12 @@ h1 {
 #today-weather {
   text-transform: capitalize;
 }
-#cloud-icon {
+#icon {
   position: relative;
   bottom: 20px;
 
   color: #1d2d50;
-  max-width: 90px;
+  max-width: 100px;
 }
 #current-temp {
   font-size: 60px;
