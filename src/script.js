@@ -59,7 +59,7 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let descriptionElement = document.querySelector("#today-weather");
   let dateElement = document.querySelector("#date");
-  //
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   windElement.innerHTML = Math.round(response.data.wind.speed);
@@ -67,6 +67,7 @@ function displayTemperature(response) {
   descriptionElement.innerHTML = response.data.weather[0].description;
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
-let apiKey = "19505ac2dee50f78aaede9546c1684d2";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Cuba&appid=${apiKey}&units=metric`;
+let apiKey = "7059cb165caa3316bff682d263a01b1e";
+let city = document.querySelector("#city-name-search").value;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayTemperature);
