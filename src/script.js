@@ -87,3 +87,12 @@ let citySearch = document.querySelector("#search-form");
 citySearch.addEventListener("submit", searchSubmit);
 
 search("London");
+
+function displayFarenheitTemp(event) {
+  event.preventDefault();
+  let farenheitTemperature = (14 * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#current-temp");
+  temperatureElement.innHTMl = Math.round(farenheitTemperature);
+}
+let farenheitLink = document.querySelector("#farenheit");
+farenheit.addEventListener("click", displayFarenheitTemp);
