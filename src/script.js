@@ -1,3 +1,4 @@
+//CITY SEARCH - REPLACES H1 WITH SEARCHED CITY
 function cityName(event) {
   event.preventDefault();
   let formInput = document.querySelector("#city-name-search");
@@ -7,8 +8,9 @@ let h1 = document.querySelector("#city");
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", cityName);
 
-function formatDate() {
-  let now = new Date();
+// DATE AND TIME FUNCTION
+function formatDate(timestamp) {
+  let now = new Date(timestamp);
   let days = [
     "Sunday",
     "Monday",
@@ -33,6 +35,7 @@ function formatDate() {
 let dayAndTime = document.querySelector("#date");
 dayAndTime.innerHTML = formatDate();
 
+//CHANGES UNIT OF CURRENT TEMP
 function changeCelsius(event) {
   event.preventDefault();
   todayTemp.innerHTML = "15°";
@@ -42,29 +45,28 @@ function changeFarenheit(event) {
   todayTemp.innerHTML = "59°";
 }
 let todayTemp = document.querySelector("#current-temp");
-
 let celsiusTemp = document.querySelector("#celsius");
 celsiusTemp.addEventListener("click", changeCelsius);
-
 let farenheitTemp = document.querySelector("#farenheit");
 farenheitTemp.addEventListener("click", changeFarenheit);
 
-//API location and temp
-
-function showTemp(response) {
-  console.log(response);
-  document.querySelector("h1").innerHTML = response.data.name;
-  document.querySelector("#current-temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
+//API LOCATION AND TEMP
+function displayTemperature(response) {
+  console.log(response.data);
+  let temperatureElement = document.querySelector("#current-temp");
+  let cityElement = document.querySelector("#city");
+  let windElement = document.querySelector("#wind");
+  let humidityElement = document.querySelector("#humidity");
+  let descriptionElement = document.querySelector("#today-weather");
+  let dateElement = document.querySelector("#date");
+  //
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  cityElement.innerHTML = response.data.name;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  humidityElement.innerHTML = response.data.main.humidity;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
-function searchEvent(event) {
-  event.preventDefault();
-  let apiKey = "19505ac2dee50f78aaede9546c1684d2";
-  let city = document.querySelector("#city-name-search").value;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showTemp);
-}
-
-let citySearch = document.querySelector("#search-form");
-citySearch.addEventListener("submit", searchEvent);
+let apiKey = "19505ac2dee50f78aaede9546c1684d2";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Cuba&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(displayTemperature);
