@@ -45,10 +45,6 @@ function changeFarenheit(event) {
   todayTemp.innerHTML = "59°";
 }
 let todayTemp = document.querySelector("#current-temp");
-let celsiusTemp = document.querySelector("#celsius");
-celsiusTemp.addEventListener("click", changeCelsius);
-let farenheitTemp = document.querySelector("#farenheit");
-farenheitTemp.addEventListener("click", changeFarenheit);
 
 //API LOCATION AND TEMP
 function displayTemperature(response) {
@@ -69,7 +65,7 @@ function displayTemperature(response) {
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@4x.png`
   );
 }
 function search(city) {
@@ -87,12 +83,3 @@ let citySearch = document.querySelector("#search-form");
 citySearch.addEventListener("submit", searchSubmit);
 
 search("London");
-
-function displayFarenheitTemp(event) {
-  event.preventDefault();
-  let farenheitTemperature = (14 * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#current-temp");
-  temperatureElement.innHTMl = Math.round(farenheitTemperature);
-}
-let farenheitLink = document.querySelector("#farenheit");
-farenheit.addEventListener("click", displayFarenheitTemp);
