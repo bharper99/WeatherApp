@@ -36,24 +36,29 @@ let dayAndTime = document.querySelector("#date");
 dayAndTime.innerHTML = formatDate();
 
 //DAILY FORECAST
-function displayForecast() {
+function displayForecast(response) {
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Thu", "Fri,", "Sat", "Sun", "Mon", "Tue"];
-
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `<div class="col-2">
- <div class="weather-forecast-date">${day}</div>
+ <div class="weather-forecast-date">${forecastDay.dt}</div>
 <img
-src="http://openweathermap.org/img/wn/04d@2x.png"
+src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
 alt=""
 width="42"/>
 <div class="weather-forecast-temperature">
-<span class="weather-forecast-temperature-max"> 12° </span>
-<span class="weather-forecast-temperature-min"> 8° </span>
+<span class="weather-forecast-temperature-max"> ${Math.round(
+        forecastDay.temp.max
+      )}° 
+        </span>
+<span class="weather-forecast-temperature-min"> ${Math.round(
+        forecastDay.temp.min
+      )}° </span>
  </div>
  </div>
 `;
@@ -62,6 +67,7 @@ width="42"/>
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+displayForecast();
 
 //CHANGES UNIT OF CURRENT TEMP
 function changeCelsius(event) {
@@ -111,4 +117,3 @@ let citySearch = document.querySelector("#search-form");
 citySearch.addEventListener("submit", searchSubmit);
 
 search("London");
-displayForecast();
