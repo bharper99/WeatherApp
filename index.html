@@ -20,7 +20,7 @@
     <title>Weather App</title>
   </head>
   <body>
-      <div class="container-fluid" id="app-border">
+    <div class="container-fluid" id="app-border">
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <form id="search-form" class="mb-3 weatherSearchField">
@@ -44,80 +44,74 @@
               </div>
             </div>
           </form>
-          <br>
+          <br />
           <div class="row overview">
             <div class="col-6">
-            <h1 id="city">London, UK</h1>
-            <ul id="date-time">
-              <li id="date"></li>
-              <li id="today-weather"></li>
-            </ul>
+              <h1 id="city">London, UK</h1>
+              <ul id="date-time">
+                <li id="date"></li>
+                <li id="today-weather"></li>
+              </ul>
             </div>
             <div class="col-6">
-              <img src=""  id="icon" alt="">
+              <img src="" id="icon" alt="" />
             </div>
           </div>
-            <div class="row">
-          <div class="col-6 ">
-           
-            <span id="current-temp"></span>
-            <span class ="unit"> °C</span>
-           
-          </div>        
+          <div class="row">
+            <div class="col-6">
+              <span id="current-temp"></span>
+              <span class="unit"> °C</span>
+            </div>
             <div class="col-6 p-0" id="weather-stats-style">
               <ul id="weather-stats">
-               <li>Wind: <span id="wind">5</span> km/h</li>
+                <li>Wind: <span id="wind">5</span> km/h</li>
                 <li>Humidity: <span id="humidity">75</span>%</li>
               </ul>
-            </div>    
-            <div class="row" id="days-of-week">
-          <div class="col-2">
-            <p>Mon</p>  
-            <div class="col,"><i class="fas fa-cloud weekDayImage cloudIcon"></i></div>
-            <div class="col">15° <small>9°</small></div>
-          </div>
-          <div class="col-2">
-           <p>Tue</p> 
-            <div class="col">
-              <i class="fas fa-cloud-showers-heavy weekDayImage"></i></div>
-            <div class="col">12° <small>6°</small></div>
-          </div>
-          <div class="col-2">
-            <p>Wed</p> 
-            <div class="col"><i class="fas fa-wind weekDayImage"></i></div>
-            <div class="col">17° <small>12°</small></div>
-          </div>
-          <div class="col-2">
-            <p>Thu</p> 
-            <div class="col"><i class="fas fa-cloud weekDayImage cloudIcon"></i></div>
-            <div class="col">15° <small>9°</small></div>
-          </div>
-          <div class="col-2">
-             <p>Fri</p> 
-            <div class="col">
-              <i class="fas fa-cloud-showers-heavy weekDayImage"></i> </div>
-            <div class="col">12° <small>6°</small></div>
-          </div>
-          <div class="col-2">
-             <p>Sat</p> 
-            <div class="col">
-              <i class="fas fa-cloud-showers-heavy weekDayImage"></i> </div>
-            <div class="col">12° <small>6°</small></div>
-          </div>
-          <div>
-              <br>
-              <br>
-         
             </div>
-        </div>        
+
+            <div class="weather-forecast" id="forecast">
+              <div class="row">
+                <div class="col-2">
+                  <div class="weather-forecast-date">Thu</div>
+                  <img
+                    src="http://openweathermap.org/img/wn/04d@2x.png"
+                    alt=""
+                    width="42"
+                  />
+                  <div class="weather-forecast-temperature">
+                    <span class="weather-forecast-temperature-max"> 12° </span>
+                    <span class="weather-forecast-temperature-min"> 8° </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <br />
+              <br />
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <footer>
-          <small>This project was coded by <a href="https://www.harperbphotos.com/" class="website-link" target
-            ="_blank">Beth Harper</a> and is open-sourced on <a href="https://github.com/bharper99/WeatherApp" target
-            ="_blank" class="website-link"> GitHub</a> </small>
-            </footer>
-     <script src="src/script.js"></script>
-</body>
+      <small
+        >This project was coded by
+        <a
+          href="https://www.harperbphotos.com/"
+          class="website-link"
+          target="_blank"
+          >Beth Harper</a
+        >
+        and is open-sourced on
+        <a
+          href="https://github.com/bharper99/WeatherApp"
+          target="_blank"
+          class="website-link"
+        >
+          GitHub</a
+        >
+      </small>
+    </footer>
+    <script src="src/script.js"></script>
+  </body>
 </html>
