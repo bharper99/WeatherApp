@@ -53,7 +53,7 @@ h1 {
   bottom: 50px;
 }
 #current-temp {
-  font-size: 80px;
+  font-size: 90px;
   margin-left: none;
   color: #1d2d50;
 }
@@ -63,6 +63,7 @@ h1 {
   top: -43px;
   font-size: 15px;
   font-weight: bold;
+  font-size: 18px;
 }
 
 :link {
@@ -95,6 +96,10 @@ h1 {
   text-align: center;
   padding-top: 50px;
   margin-left: 2px;
+}
+.weather-forecast-temperature-min {
+  font-size: 14px;
+  color: #a8a9ad;
 }
 .weekDayImage {
   font-size: 25px;

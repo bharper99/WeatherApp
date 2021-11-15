@@ -39,15 +39,7 @@ dayAndTime.innerHTML = formatDate();
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return days[day];
 }
 function displayForecast(response) {
@@ -104,6 +96,7 @@ let todayTemp = document.querySelector("#current-temp");
 
 //API LOCATION AND TEMP
 function displayTemperature(response) {
+  getForecast(response.data.coord);
   console.log(response.data);
   let temperatureElement = document.querySelector("#current-temp");
   let cityElement = document.querySelector("#city");
