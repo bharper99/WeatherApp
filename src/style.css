@@ -51,6 +51,7 @@ h1 {
 #icon {
   position: relative;
   bottom: 50px;
+  right: 25px;
 }
 #current-temp {
   font-size: 90px;
