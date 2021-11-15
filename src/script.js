@@ -67,7 +67,6 @@ width="42"/>
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-displayForecast();
 
 //CHANGES UNIT OF CURRENT TEMP
 function changeCelsius(event) {
